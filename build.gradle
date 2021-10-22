@@ -14,15 +14,21 @@ repositories {
 }
 
 dependencies {
+//compile vs implementation : compile은 Gradle3.0부터 deprecated 되었다.
     implementation 'org.springframework.boot:spring-boot-starter-web'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+    //MYSQL
     runtimeOnly 'mysql:mysql-connector-java'
 
+    //JPA
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+
+    //SWAGGER
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
 }
 
 test {
